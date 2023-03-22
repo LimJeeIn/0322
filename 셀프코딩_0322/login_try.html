@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!--
+     클래스 네이밍은 
+    class="label-hold-red"
+	        형태-의미-상태 
+            
+    클래스 네이밍은 한눈에 이해가도록 써야한다
+    해당 ui의 어떤 요소의 어떤 스타일을 적용한건지 
+    
+    css에서 최적화 하려면 flex 남용 하면 안되고 float 쓸수 있으면 float 써도 된다
+
+    a 안에 button이 자식으로 넣으면 안된다
+    a가 눌렸는지 button이 눌렸는지 브라우저가 헷갈릴수 있다
+    -->
+    <div class="wrapper">
+      <h1>로그인 또는 회원가입</h1>
+      <!-- 
+        닫기 버튼이 설명글에는 정확한 주체가 필요하다
+        ex) 로그인 닫기 버튼
+        닫기 버튼의 위치는 하단이 좋다 
+        상단 위치라면 닫기 버튼을 누르려 다시 상단으로 올라가는 불편함 때문 -->
+      <span><img src="" alt="닫기" /> </span>
+      <section>
+        <div class="write login">
+          <!-- 두번째 폰트 크기가 크더라도 h1은 최상단의 폰트에만 적용할수 있다 -->
+          <h2>위니브에서 여러분의 궁금증을 해결하세요!:)</h2>
+          <div class="login_inp">
+            <input
+              class="id-inp"
+              id="id-txt"
+              type="text"
+              placeholder="아이디"
+              required
+            />
+            <!-- required는 필수 요소라고 표시해줌 
+            label은 input에 대한 설명 요소이다-->
+            <!--label 말고 강조되는 strong이나 p를 써야한다 -->
+            <label for="id-inp" class="wrong_err">아이디를 입력해 주세요</label>
+            <input
+              class="pw-inp"
+              id="pw-txt"
+              type="password"
+              placeholder="비밀번호"
+            />
+
+            <label for="pw-inp" class="wrong_err"
+              >아이디 혹은 비밀번호와 일치하지 않습니다</label
+            >
+          </div>
+          <!-- IR(Image Replacement) 테크닉으로 숨김처리 해야함 -->
+          <input class="ckbox" type="checkbox" />
+          <label for="ckbox">로그인 상태 유지</label>
+        </div>
+        <!-- 
+            - 로그인 버튼 만들 때 태그 <button type="submit">이 맞다
+            여러가지 속성이 들어가야 될 버튼이라면
+            자식을 포함할수 없는 열린태그인 input 보다는 button 태그로 만드는게 맞다
+            로그인버튼 같이 간단한 버튼은 input으로 만들어도 된다
+            - submit되는 버튼은 submit이 기본값이기 때문에 type은 생략해도 된다
+            하지만 submit될 요소가 아니라면 type을 명시해줘야 한다 
+        -->
+        <!-- #은  #none(페이지 내의 id="none"으로 이동)으로 하는게 좋다 -->
+        <a href="#" class="login-btn"> 로그인 </a>
+        <div class="lost_user">
+          <span>회원가입</span>
+          <span>아이디/비밀번호 찾기</span>
+        </div>
+      </section>
+
+      <!-- 라인을 만들때는 별다른 내용이 없기때문에 span 태그로 만드는게 맞다 -->
+      <p class="line"></p>
+
+      <section>
+        <!-- 연속되는 요소는 ul li로 감싸는게 맞다
+하지만 반복되는게 2개 이하이면 굳이 ul li로 안줘도 된다 -->
+        <div class="user login">
+          <!-- 구체적인 제목 -> 소셜 로그인 -->
+          <h2 class="a11y-hidden">또는 로그인</h2>
+          <a href="#">구글 계정으로 로그인</a>
+          <a href="#">페이스북 계정으로 로그인</a>
+          <a href="#">네이버 계정으로 로그인</a>
+          <a href="#">카카오톡 계정으로 로그인</a>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>

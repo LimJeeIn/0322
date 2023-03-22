@@ -1,0 +1,114 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ul,
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+img {
+  width: 100%;
+  vertical-align: top;
+}
+.a11y-hidden {
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+}
+
+/* main */
+.wrapper {
+  width: 520px;
+  margin: auto;
+}
+h1 {
+  padding: 20px 0px;
+  text-align: center;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  border-bottom: 1px solid #ddd;
+}
+section {
+  padding: 26px 24px;
+}
+.write h2 {
+  font-family: Spoqa Han Sans Neo;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: left;
+  margin-bottom: 24px;
+}
+.login_inp {
+  margin-bottom: 17px;
+}
+input {
+  width: 100%;
+  border: 1px solid #c4c4c4;
+  border-radius: 5px;
+  padding: 15px 0 15px 16px;
+}
+
+.wrong_err {
+  font-size: 14px;
+  color: #f4492e;
+  margin-bottom: 34px;
+}
+.ckbox {
+  display: inline-block;
+  width: 22px;
+  /* height로 고정하는것은 좋지 않은 버릇이다 */
+  height: 22px;
+  border-radius: 50%;
+  background: #2f80ed;
+}
+.login-btn {
+  display: inline-block;
+  width: 100%;
+  height: 50px;
+  padding: 14px 0;
+  background: #2f80ed;
+  border-radius: 5px;
+  text-align: center;
+  margin: 20px 0;
+}
+.lost_user {
+  font-size: 14px;
+  line-height: 18px;
+  text-align: center;
+  color: #767676;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 60px;
+}
+.lost_user span:first-child::after {
+  content: '';
+  display: inline-block;
+  vertical-align: middle;
+  width: 1px;
+  height: 18px;
+  background: #767676;
+  margin: 0 12px;
+}
+.user a {
+  display: block;
+  width: 100%;
+  font-weight: 500;
+  font-style: 16px;
+  padding: 15px 0;
+  text-align: center;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  margin-bottom: 10px;
+}
